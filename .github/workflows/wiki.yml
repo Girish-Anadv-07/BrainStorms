@@ -17,13 +17,13 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: Girish-Anadv-07/BrainStorms.wiki
-        path: dfs.wiki
+        path: BrainStorms.wiki
 
     - name: Wiki
       run: |
           git config --global user.name "${{secrets.GIT_USER}}"
           git config --global user.email "${{secrets.GIT_GMAIL}}"
-          cd dfs.wiki 
+          cd BrainStorms.wiki 
           rm -rf *
           mv ../wikifiles/ .
           mv ../Home.md .
