@@ -26,8 +26,8 @@ jobs:
           cd BrainStorms.wiki 
           rm -rf *
           ls
-          mv ../wikifiles/* .
-          mv ../Home.md .
+          cp ../wikifiles/* .
+          cp ../Home.md .
           ls
           python ../sidebar.py
           ls
