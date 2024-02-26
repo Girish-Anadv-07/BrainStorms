@@ -9,5 +9,5 @@ with open("_Sidebar.md", "w") as file:
             file.write("* ## **"+ subdir[13:] +"**" + "\n")
             print(subdir)
         for file_name in files:
-            file.write("\t"+"* ### ["+ file_name[:-3] + "](" + file_name[:-3].replace(" ", "%20") + ")" + "\n")
+            file.write("\t"+"* ["+ file_name[:-3] + "](" + file_name[:-3].replace(" ", "%20") + ")" + "\n")
     file.close()
