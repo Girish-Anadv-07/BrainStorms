@@ -7,6 +7,10 @@ if not os.path.exists(path):
     os.mkdir(path)
 os.chdir(folder_name)
 
+path = "../wikifiles/"
+if not os.path.exists(path):
+    os.mkdir(path)
+
 path = os.path.join("../wikifiles/", folder_name)
 if not os.path.exists(path):
     os.mkdir(path)
