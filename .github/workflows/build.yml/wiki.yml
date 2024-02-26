@@ -1,0 +1,32 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+  id-token: write
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        repository: Girish-Anadv-07/BrainStorms.wiki
+        path: dfs.wiki
+
+    - name: Wiki
+      run: |
+          git config --global user.name "${{secrets.GIT_USER}}"
+          git config --global user.email "${{secrets.GIT_GMAIL}}"
+          cd dfs.wiki 
+          rm -rf *
+          mv ../wikifiles/ .
+          git add .
+          git commit -m "update"
+          git push
+          
