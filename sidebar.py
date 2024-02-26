@@ -2,7 +2,6 @@ import os
 rootdir = "../wikifiles"
 with open("_Sidebar.md", "w") as file:
     file.write("# **Projects**"+"\n\n")
-    file.write("***"+"\n\n")
     for subdir, dirs, files in os.walk(rootdir):    
         print(subdir)
         if subdir[13:]!='':
