@@ -26,6 +26,8 @@ jobs:
           cd dfs.wiki 
           rm -rf *
           mv ../wikifiles/ .
+          mv ../Home.md .
+          python ../sidebar.py
           git add .
           git commit -m "update"
           git push
